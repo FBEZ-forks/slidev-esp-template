@@ -10,6 +10,7 @@ You can jump to:
   - [Software dependencies](#software-dependencies)
   - [Template setup](#template-setup)
 - [Usage](#usage)
+  - [Usage as a submodule](#usage-as-a-submodule)
   - [Examples of Slidev presentations](#examples-of-slidev-presentations)
 - [Learn more about Slidev](#learn-more-about-slidev)
   - [Quick tips](#quick-tips)
@@ -103,6 +104,44 @@ During your talk, you can:
 OR
 - Use a workflow to build and [Deploy Slidev to GitHub Pages](https://github.com/igrr/esb24/blob/main/.github/workflows/deploy.yml)
 
+
+### Usage as a submodule
+
+To keep your presentation under version control, you can include this template as a Git submodule.
+
+In your repository, follow these steps:
+
+* Add the template as a submodule:
+
+  ```bash
+  git submodule add https://github.com/espressif/slidev-esp-template.git
+  ```
+
+* Copy `slides.md` to `index.md` in your repository:
+
+  ```bash
+  cp slidev-esp-template/slides.md index.md
+  ```
+
+* Enter the `slidev-esp-template` directory:
+
+  ```bash
+  cd slidev-esp-template
+  ```
+
+* Install the required packages:
+
+  ```bash
+  npm install
+  ```
+
+  > You still need to install the tools described [above](#template-setup).
+
+* Run Slidev:
+
+  ```bash
+  slidev slide.external.md
+  ```
 
 ### Examples of Slidev presentations
 
